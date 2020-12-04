@@ -1,0 +1,47 @@
+
+/* 
+    dark theme definitions 
+*/
+
+$windows-color: #353D45; /* dark gray tone */
+$text-color: white;
+
+$progressbar-bg-color: dimgray;
+$progressbar-fg-color: lightsteelblue;
+
+$slider-before-handle-color: dimgray;
+$slider-after-handle-color: lightsteelblue;
+$slider-handle-color: dimgray;
+
+$tableview-header-color: #353D45; /* black-ish */
+$tableview-background-color: $windows-color;
+
+$tooltip-bg-color: darkslateblue;
+$tooltip-border-color: black;
+
+
+/* icons */
+$icon-button-normal: url(:/Resources/Icons/dark/Button_normal.png);
+$icon-button-normal-disabled: url(:/Resources/Icons/dark/Button_normal_disabled.png);
+
+$icon-button-hover: url(:/Resources/Icons/dark/Button_hover.png);
+$icon-button-pressed: url(:/Resources/Icons/dark/Button_pressed.png);
+$icon-button-pressed-disabled: url(:/Resources/Icons/dark/Button_pressed_disabled.png);
+
+$icon-combobox-arrow: url(:/Resources/Icons/dark/Down-Arrow.png);
+
+$icon-checkbox-unchecked: url(:/Resources/Icons/dark/Checkbox_unchecked.png);
+$icon-checkbox-unchecked-disabled: url(:/Resources/Icons/dark/Checkbox_unchecked_disabled.png);
+$icon-checkbox-unchecked-hover: url(:/Resources/Icons/dark/Checkbox_unchecked_hover.png);
+
+$icon-checkbox-checked: url(:/Resources/Icons/dark/Checkbox_checked.png);
+$icon-checkbox-checked-disabled: url(:/Resources/Icons/dark/Checkbox_checked_disabled.png);
+$icon-checkbox-checked-hover: url(:/Resources/Icons/dark/Checkbox_checked_hover.png);
+
+$icon-radiobtn-unchecked: url(:/Resources/Icons/dark/RadioButton_unchecked.png);
+$icon-radiobtn-unchecked-disabled: url(:/Resources/Icons/dark/RadioButton_unchecked_disabled.png);
+$icon-radiobtn-unchecked-hover: url(:/Resources/Icons/dark/RadioButton_unchecked_hover.png);
+
+$icon-radiobtn-checked: url(:/Resources/Icons/dark/RadioButton_checked.png);
+$icon-radiobtn-checked-disabled: url(:/Resources/Icons/dark/RadioButton_checked_disabled.png);
+$icon-radiobtn-checked-hover: url(:/Resources/Icons/dark/RadioButton_checked_hover.png);

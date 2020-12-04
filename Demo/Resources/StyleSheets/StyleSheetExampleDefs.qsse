@@ -1,0 +1,15 @@
+
+/*
+    Example QSS-e variable definitions
+*/
+
+$font-familiy: "Segoe UI";
+
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+$font-size-xl: 26px;
+
+/* for both themes! */
+$border-color: #9fb3c8; /* grey-ish */
+

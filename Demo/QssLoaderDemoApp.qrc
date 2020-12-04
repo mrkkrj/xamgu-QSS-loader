@@ -1,0 +1,52 @@
+<RCC>
+  <qresource prefix="/">
+    <file>Resources/Icons/demoapp.ico</file>
+    
+    <file>Resources/Icons/dark/Down-Arrow.png</file>
+    <file>Resources/Icons/dark/Button_hover.png</file>
+    <file>Resources/Icons/dark/Button_normal.png</file>
+    <file>Resources/Icons/dark/Button_normal_disabled.png</file>
+    <file>Resources/Icons/dark/Button_pressed.png</file>
+    
+    <file>Resources/Icons/Button_hover.png</file>
+    <file>Resources/Icons/Button_normal.png</file>
+    <file>Resources/Icons/Button_normal_disabled.png</file>
+    <file>Resources/Icons/Button_pressed.png</file>
+    <file>Resources/Icons/Button_pressed_disabled.png</file>
+    
+    <file>Resources/Icons/Checkbox_checked.png</file>
+    <file>Resources/Icons/Checkbox_checked_disabled.png</file>
+    <file>Resources/Icons/Checkbox_unchecked.png</file>
+    <file>Resources/Icons/Checkbox_unchecked_disabled.png</file>
+    <file>Resources/Icons/Checkbox_unchecked_hover.png</file>
+    <file>Resources/Icons/Checkbox_checked_hover.png</file>
+
+    <file>Resources/Icons/dark/Checkbox_checked.png</file>
+    <file>Resources/Icons/dark/Checkbox_checked_disabled.png</file>
+    <file>Resources/Icons/dark/Checkbox_unchecked.png</file>
+    <file>Resources/Icons/dark/Checkbox_unchecked_disabled.png</file>
+    <file>Resources/Icons/dark/Checkbox_unchecked_hover.png</file>
+    <file>Resources/Icons/dark/Checkbox_checked_hover.png</file>
+    
+    <file>Resources/Icons/Down-Arrow.png</file>
+    
+    <file>Resources/Icons/RadioButton_checked.png</file>
+    <file>Resources/Icons/RadioButton_checked_disabled.png</file>
+    <file>Resources/Icons/RadioButton_unchecked.png</file>
+    <file>Resources/Icons/RadioButton_unchecked_disabled.png</file>
+    <file>Resources/Icons/RadioButton_unchecked_hover.png</file>
+    <file>Resources/Icons/RadioButton_checked_hover.png</file>
+
+    <file>Resources/Icons/dark/RadioButton_checked.png</file>
+    <file>Resources/Icons/dark/RadioButton_checked_disabled.png</file>
+    <file>Resources/Icons/dark/RadioButton_unchecked.png</file>
+    <file>Resources/Icons/dark/RadioButton_unchecked_disabled.png</file>
+    <file>Resources/Icons/dark/RadioButton_unchecked_hover.png</file>
+    <file>Resources/Icons/dark/RadioButton_checked_hover.png</file>
+
+    <file>Resources/StyleSheets/DemoAppStyleSheet.qsse</file>
+    <file>Resources/StyleSheets/StyleSheetExampleDefs.qsse</file>
+    <file>Resources/StyleSheets/DemoAppLightTheme.qsse</file>
+    <file>Resources/StyleSheets/DemoAppDarkTheme.qsse</file>
+  </qresource>
+</RCC>

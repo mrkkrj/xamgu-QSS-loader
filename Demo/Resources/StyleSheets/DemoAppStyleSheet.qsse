@@ -1,0 +1,397 @@
+
+/*
+	Variable definitions
+*/
+@import "StyleSheetExampleDefs.qsse";
+
+
+/*
+	Load theme's colors & icons
+	 - using a switch with the $Theme variable!
+*/
+$theme-stylesheet-Dark: DemoAppDarkTheme;
+$theme-stylesheet-Light: DemoAppLightTheme;
+
+$theme-stylesheet-var: theme-stylesheet-$Theme;
+$theme-stylesheet: $$theme-stylesheet-var;
+
+@import "$theme-stylesheet.qsse";
+
+
+
+/* 
+	QWidget 
+*/
+QWidget {
+	font-size: $font-size-m;
+	font-family: $font-familiy;
+
+	background: $windows-color;
+	color: $text-color;
+}
+
+
+/* 
+	QDialog 
+*/
+QDialog {
+	background-color: $windows-color; 
+}
+
+
+/* 
+	QComboBox 
+*/
+QComboBox {
+	font-size: $font-size-m;
+	font-family: $font-familiy;
+	border-image: $icon-button-normal 8;
+	border-width: 8px;
+	padding-top: -5px;
+	min-height: 16px;
+	min-width: 100px;
+}
+
+QComboBox:on {
+	font-weight: bold;
+	border-image: $icon-button-pressed 8;
+	padding-top: -15px;
+	padding-bottom: -17px;
+}
+
+QComboBox:hover {
+	border-image: $icon-button-hover 8;
+}
+
+QComboBox::drop-down {
+	border: 0px;
+	padding-top: 12px;
+	width: 16px;
+	height: 8px;
+}
+
+QComboBox::down-arrow {
+    image: $icon-combobox-arrow;
+	padding-top: -15px;
+}
+
+
+/* 
+	QLineEdit 
+*/
+QLineEdit {
+	font-size: $font-size-m;
+	min-height: 38px;
+	padding-top: -2px;
+	padding-left: 6px;
+	border: 1px solid $border-color;
+	border-radius: 6px;
+}
+
+
+/* 
+	QToolTip 
+*/
+QToolTip {
+   color: #ffffff; /* always */
+   background-color: $tooltip-bg-color; 
+   border: 1px solid $tooltip-border-color;
+   font-size: $font-size-s;
+   padding-left: 6px;
+   padding-right: 6px;
+}
+
+
+/*  
+	QPushButton & QToolButton
+*/
+QPushButton {
+	font-size: $font-size-l;
+	font-family: $font-familiy;
+	border-image: $icon-button-normal 8; 
+	border-width: 8px;
+	padding-top: -5px;
+	min-height: 16px;
+	min-width: 100px;
+}
+
+QPushButton:disabled,
+QToolButton:disabled {
+	border-image: $icon-button-normal-disabled 8; 
+	color: lightgrey;
+}
+
+QPushButton:hover,
+QToolButton:hover {
+	border-image: $icon-button-hover 8;
+}
+
+QPushButton:pressed,
+QToolButton:pressed {
+	border-image: $icon-button-pressed 8;
+	color: white;
+}
+
+QPushButton:checked:enabled,
+QToolButton:checked:enabled {
+	border-image: $icon-button-pressed 8;
+}
+
+QPushButton:checked:disabled,
+QToolButton:checked:disabled{
+	border-image: $icon-button-pressed-disabled 8;
+	color: grey;
+}
+
+QPushButton:flat {
+	border-image: none;
+	border-width: 1px;
+	border-style: solid;
+	border-color: lightgrey;
+	border-radius: 6px;
+}
+
+QToolButton {
+	font-size: $font-size-l;
+	font-family: $font-familiy;
+	border-image: $icon-button-normal 8;
+	border-width: 8px;
+	padding-top: -5px;
+	min-height: 16px;
+	min-width: 16px;
+}
+
+
+/*  
+	QRadioButton  
+*/
+QRadioButton {
+	font-size: $font-size-m;
+	font-family: $font-familiy;
+}
+
+QRadioButton::indicator {
+	width: 22px;
+	height: 22px;
+}
+
+QRadioButton::indicator:unchecked {
+	image: $icon-radiobtn-unchecked;
+}
+
+QRadioButton::indicator:checked {
+	image: $icon-radiobtn-checked;
+}
+
+QRadioButton::indicator:checked:disabled {
+	image: $icon-radiobtn-checked-disabled;
+}
+
+QRadioButton::indicator:unchecked:disabled {
+	image: $icon-radiobtn-unchecked-disabled;
+}
+
+QRadioButton::indicator:unchecked:hover {
+	image: $icon-radiobtn-unchecked-hover;
+}
+
+QRadioButton::indicator:checked:hover {
+	image: $icon-radiobtn-checked-hover;
+}
+
+
+/*  
+	QCheckBox  
+*/
+QCheckBox {
+	font-size: $font-size-m;
+}
+
+QCheckBox::indicator {
+	width: 22px;
+	height: 22px;
+}
+
+QCheckBox::indicator:unchecked {
+	image: $icon-checkbox-unchecked;
+}
+
+QCheckBox::indicator:checked {
+	image: $icon-checkbox-checked;
+}
+
+QCheckBox::indicator:checked:disabled {
+	image: $icon-checkbox-checked-disabled;
+}
+
+QCheckBox::indicator:unchecked:disabled {
+	image: $icon-checkbox-unchecked-disabled;
+}
+ 
+QCheckBox::indicator:unchecked:hover {
+	image: $icon-checkbox-unchecked-hover;
+}
+
+QCheckBox::indicator:checked:hover {
+	image: $icon-checkbox-checked-hover;
+}
+
+
+/*  QToolBarButton  */
+
+
+/*  QDial  */
+
+
+/*  
+	QSlider  
+*/
+
+QSlider::groove:vertical {
+    border: none;
+    width: 4px;
+}
+QSlider::groove:horizontal {
+    border: none;
+    height: 4px;
+}
+
+QSlider::handle {
+	background: $slider-handle-color;
+	border: 1px solid $border-color;
+}
+
+QSlider::handle:vertical {	
+	height: 15px;
+    width: 20px;
+    line-height: 30px;
+    margin-left: -13px;
+    margin-right: -13px;
+    /*border-radius: 15px;*/
+}
+
+QSlider::handle:horizontal {
+	width: 12px;
+    height: 18px;
+    line-height: 30px;
+    margin-top: -13px;
+    margin-bottom: -13px;
+    /*border-radius: 15px;*/
+	border-radius: 6px
+}
+
+
+QSlider::add-page:vertical, 
+QSlider::add-page:horizontal {
+    background: $slider-before-handle-color;
+}
+
+QSlider::sub-page:vertical, 
+QSlider::sub-page:horizontal {
+    background: $slider-after-handle-color;
+}
+
+
+/*  QScrollBar  */
+
+/*  QSpinBox  */
+
+/*  QDoubleSpinBox  */
+
+/*  QDateTimeEdit  */
+
+/*  QDateEdit  */
+
+/*  QTimeEdit  */
+
+/*  QFrame (including VLine and HLine)  */
+
+
+/* 
+	QLabel  
+*/
+QLabel {
+	font-size: $font-size-m;
+}
+
+
+/* QTabWidget */
+
+
+/* QCalendarWidget */
+
+
+/* 
+	QProgressBar 
+*/
+QProgressBar {
+	background-color: $progressbar-bg-color;
+	border: none;
+	text-align: right;
+	margin-right: 40px;
+	border-radius: 6px;
+	max-height: 20px;
+
+	color: $progressbar-fg-color; /* text */
+	font-weight: bold;
+}
+
+QProgressBar::chunk {
+	background-color: $progressbar-fg-color; 
+	margin: 0px;
+	border: none;
+	border-radius: 6px;
+}
+
+
+/* QLCDNumber  */
+
+/* QSplitter  */
+
+/* QStackedWidget  */
+
+/* QToolBox  */
+
+/* QAbstractScrollArea  */
+
+/* QPlainTextEdit  */
+
+/* QScrollArea  */
+
+/* QTextEdit  */
+
+/* QTextBrowser  */
+
+/* QHeaderView  */
+
+/* QColumnView  */
+
+
+/* 
+	QListView 
+*/
+QListView {
+	padding: 5px 4px;
+	border: 1px solid $border-color;
+	border-radius: 4px;
+}
+
+
+/* QTreeView */
+
+
+/* 
+	QTableView  
+*/
+QTableView {
+	background-color: $tableview-background-color;
+}
+
+/* the header */
+QTableView QHeaderView::section    
+{
+    background-color: $tableview-header-color;  
+    font-weight:      bold;
+    text-transform:   uppercase;
+}
+
