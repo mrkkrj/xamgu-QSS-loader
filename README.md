@@ -10,12 +10,16 @@ How many times you wished that you **could define a color once** and wouldn't ha
 The supported extensions are:
 
 1. QSS variables: 
-<br>you define them like:
+<br>you define them like this:
+
          $default-font-size: 16px;
          $default-font-family: "Arial";
          $default-font-family-for-widgets: $default-font-family;
-and then use them like:
+
+and then use them like that:
+
          QWidget { font-size: $default-font-size; color: red; }
+
 
 2. QSS file imports:
         @import "SomeStylesheetFile.qss" 
@@ -58,7 +62,7 @@ In case of syntactic errors, you can examine the problem using loader's *message
 ## Demo App:
 
 
-hajashjsahjhsa
+For demo and example purposes a Demo App is also contained in this repository:
 
 
 ![xamgu demo light](demo-app-LightTheme.gif)
