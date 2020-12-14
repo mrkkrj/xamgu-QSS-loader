@@ -9,19 +9,21 @@ How many times you wished that you **could define a color once** and wouldn't ha
 
 The supported extensions are:
 
-1. QSS variables: 
+1. QSS variables 
 <br>you define them like this:
 
          $default-font-size: 16px;
          $default-font-family: "Arial";
          $default-font-family-for-widgets: $default-font-family;
 
-and then use them like that:
+  and then use them like that:
 
          QWidget { font-size: $default-font-size; color: red; }
 
 
 2. QSS file imports:
+<br>you use them like this:
+
         @import "SomeStylesheetFile.qss" 
 
 
