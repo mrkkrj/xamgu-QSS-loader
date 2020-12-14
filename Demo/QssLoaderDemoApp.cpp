@@ -17,7 +17,7 @@
 
 // OPEN TODO::: enable configurable logging???
 #ifdef QSSLD_LOGGING_ENABLED
-#  include "Logging/Logging.h"
+#  include "Logging/Logger.h"
 #else
 #  include <QDebug>
 
@@ -25,7 +25,6 @@
 
 #  define QTUTILS_LOG_TRACE(theme, a) do {} while (0)
 #  define QTUTILS_LOG_INFO(theme, a) do {} while (0)
-//#  define QTUTILS_LOG_ERROR(type, theme, a) do {} while (0) --> OPEN TODO:::
 #  define QTUTILS_LOG_ERROR(theme, a) do {} while (0)
 #endif
 

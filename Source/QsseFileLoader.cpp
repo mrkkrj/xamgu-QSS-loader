@@ -10,7 +10,7 @@
 #include "QsseFileLoader.h"
 
 #ifdef QSSLD_LOGGING_ENABLED
-#  include "Logging/Logging.h"
+#  include "Logging/Logger.h"
 #else
 #include <QDebug>
 #endif
@@ -21,11 +21,19 @@
 
 // OPEN TODO::: enable configurable logging???
 #ifndef QSSLD_LOGGING_ENABLED
-#  define QTUTILS_LOG_TRACE(theme, a) do {} while (0)
-#  define QTUTILS_LOG_INFO(theme, a) do {} while (0)
-//#  define QTUTILS_LOG_ERROR(type, theme, a) do {} while (0) --> OPEN TODO:::
-#  define QTUTILS_LOG_ERROR(theme, a) do {} while (0)
+//#  define QTUTILS_LOG_TRACE(theme, a) do {} while (0)
+//#  define QTUTILS_LOG_INFO(theme, a) do {} while (0)
+////#  define QTUTILS_LOG_ERROR(type, theme, a) do {} while (0) --> OPEN TODO:::
+//#  define QTUTILS_LOG_ERROR(theme, a) do {} while (0)
+
+// minimal fallback
+#  define QTUTILS_LOG_TRACE(theme, a) do { qDebug() << " [qss_ld]" << a; } while (0)
+#  define QTUTILS_LOG_INFO(theme, a) do  { qDebug() << " [qss_ld] INFO:" << a; } while (0)
+#  define QTUTILS_LOG_ERROR(theme, a) do { qDebug() << " [qss_ld] ERROR:" << a; } while (0)
+
 #endif
+
+
 
 
 using namespace ibkrj::xamgu;
@@ -419,7 +427,7 @@ bool QsseFileLoader::processImportClause(QString& strg, QString& fileContents)
         QString msg("import clause for \"%1\" in file \"%2\" not terminated with semicolon.");
         auto& filePath = m_filePathList.last();
         
-        QTUTILS_LOG_INFO(tags::QssLoader, msg.arg(expression, filePath));
+        QTUTILS_LOG_INFO(tags::QssLoader, msg.arg(expr, filePath));
         m_errorMessages << msg.arg(expr, filePath);
 
         // ok, we are lenient...
@@ -504,6 +512,7 @@ void QsseFileLoader::reportVariableError(const QString& varName, const QString& 
 void QsseFileLoader::reportStyleFileError(const QString& filePath, const QString& errTxt) const
 {
     QString msg = "style sheet file \"%1\" " + errTxt;
+
     QTUTILS_LOG_ERROR(tags::QssLoader, msg.arg(filePath));
     m_errorMessages << msg.arg(filePath);
 }
@@ -512,11 +521,6 @@ void QsseFileLoader::reportStyleFileError(const QString& filePath, const QString
 void QsseFileLoader::traceFileInfo(const char* message, const QString& filePath) const
 {
     QTUTILS_LOG_TRACE(tags::QssLoader, message + QString("\"") + filePath + "\".");
-
-#ifndef QSSLD_LOGGING_ENABLED
-    // minimal fallback
-    qDebug() << message + QString("\"") + filePath + "\".";
-#endif
 }
 
 

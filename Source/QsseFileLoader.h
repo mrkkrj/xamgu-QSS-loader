@@ -11,17 +11,11 @@
 
 // OPEN TODO:::
 #ifdef QSSLD_LOGGING_ENABLED
-#  include "Logging/Logging.h"
+#  include "Logging/Logger.h"
 #endif
 
 #include <QtCore/QSet>
 #include <QtCore/QTextStream>
-
-
-// OPEN TODO::: enable/add configurable logging???
-#ifndef QSSLD_LOGGING_ENABLED
-#  define QSSLD_LOGGING_DEFINE_SCOPE(a)
-#endif
 
 
 namespace ibkrj { 
@@ -81,8 +75,6 @@ namespace ibkrj {
         const QStringList& messages() const;
 
     private:
-        QSSLD_LOGGING_DEFINE_SCOPE(QsseFileLoader);
-
         QString processFile(const QString& fileToLoad);
 
         QString processFileContents(const QString& contents);

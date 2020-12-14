@@ -50,6 +50,10 @@ QComboBox {
 	padding-top: -5px;
 	min-height: 16px;
 	min-width: 100px;
+
+	/** OPEN TODO:: **/
+	/* implements hover -> as QComboBox QAbstractItemView:item isn't working!!! */
+	selection-background-color: palette(highlight);
 }
 
 QComboBox:on {
@@ -75,6 +79,16 @@ QComboBox::down-arrow {
 	padding-top: -15px;
 }
 
+
+QComboBox QAbstractItemView {
+	/** OPEN TODO:: **/
+	border: 1px solid $border-color;
+	border-radius: 8px; /** OPEN TODO:: not working!!! .... **/
+	/*background: green;*/
+
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
 
 /* 
 	QLineEdit 
@@ -138,17 +152,9 @@ QToolButton:checked:enabled {
 }
 
 QPushButton:checked:disabled,
-QToolButton:checked:disabled{
+QToolButton:checked:disabled {
 	border-image: $icon-button-pressed-disabled 8;
 	color: grey;
-}
-
-QPushButton:flat {
-	border-image: none;
-	border-width: 1px;
-	border-style: solid;
-	border-color: lightgrey;
-	border-radius: 6px;
 }
 
 QToolButton {
