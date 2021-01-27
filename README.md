@@ -88,6 +88,4 @@ The problem in naming programs is that most good program names are already taken
  - polish up the dark style icons
  - add support for C++ style comments (???)
  - correct styling of the slider knob in DemoApp (!!!)
- - correct styling of cpmbo box's menu in DemoApp (!!!)
-
-
+ - correct styling of combo box's menu in DemoApp (!!!)
