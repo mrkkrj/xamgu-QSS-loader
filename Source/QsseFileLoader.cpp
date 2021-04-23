@@ -34,8 +34,6 @@
 #endif
 
 
-
-
 using namespace ibkrj::xamgu;
 
 
@@ -452,7 +450,6 @@ bool QsseFileLoader::processImportClause(QString& strg, QString& fileContents)
     }
     else
     {
-        //QTUTILS_LOG_TRACE(tags::QssLoader, QString("importing style sheet file \"") + fileName + "\".");
         traceFileInfo("importing style sheet file ", fileName);
         fileContents = processFile(fileName);
     }

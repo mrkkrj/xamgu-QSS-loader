@@ -24,7 +24,7 @@ The supported extensions are:
 2. QSS file imports:
 <br>you use them like this:
 
-        @import "SomeStylesheetFile.qss" 
+        @import "SomeStylesheetFile.qsse" 
 
 
 ## Usage:
